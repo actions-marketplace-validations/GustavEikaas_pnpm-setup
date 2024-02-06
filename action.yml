@@ -1,6 +1,7 @@
 name: "PNPM cache setup"
 description: "Set up PNPM with cache"
 branding:
+  icon: "box"
   color: "orange"
 runs:
   using: "node16"
