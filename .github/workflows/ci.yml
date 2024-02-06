@@ -26,5 +26,6 @@ jobs:
 
       - name: "Validate build"
         run: |
+          npm i -g pnpm@8.0.0
           pnpm install
           pnpm build
