@@ -3,6 +3,8 @@ on:
   push:
     tags:
       - "v*"
+env:
+  GH_TOKEN: ${{ github.token }}
 jobs:
   build:
     runs-on: ubuntu-latest
