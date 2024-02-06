@@ -1,5 +1,7 @@
-name: "PNPM setup"
+name: "PNPM cache setup"
 description: "Set up PNPM with cache"
+branding:
+  color: "orange"
 runs:
   using: "node16"
   main: "lib/main.js"
