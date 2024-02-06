@@ -1,0 +1,5 @@
+name: "PNPM setup"
+description: "Set up PNPM with cache"
+runs:
+  using: "node16"
+  main: "lib/main.js"

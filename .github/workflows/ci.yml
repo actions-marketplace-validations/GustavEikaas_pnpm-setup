@@ -1,0 +1,31 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build_test_job:
+    name: "Build and test job"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - name: "Checking out repo code"
+        uses: actions/checkout@v4
+
+      - name: Set Node.js 16.x for GitHub Action
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.x
+
+      - name: "Validate build"
+        run: |
+          npm i -g pnpm@8.0.0
+          pnpm install
+          pnpm build
